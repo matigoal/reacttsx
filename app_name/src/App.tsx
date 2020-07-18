@@ -1,7 +1,6 @@
-import React, { Fragment } from 'react';
-
+import React, { Fragment, PureComponent } from 'react';
 import Layout from './components/Layout/Layout';
-
+import BurgerBuilder from './components/containers/BurgerBuilder/BurgerBuilder';
 
 interface IProps{
 
@@ -9,7 +8,7 @@ interface IProps{
 interface IState{
 
 }
-class App extends React.Component<IProps, IState>{
+class App extends PureComponent<IProps, IState>{
   constructor(props: any){
     super(props);
   }
@@ -17,7 +16,7 @@ class App extends React.Component<IProps, IState>{
 render(){
   return(
     <Fragment>
-      <Layout><p>Test</p></Layout>
+      <Layout><BurgerBuilder /></Layout>
     </Fragment>
   )
 }
